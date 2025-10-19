@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our plans</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #757575;
+      --panel: #eb6f2d;
+      --panel-light: #ffa362;
+      --text: #ffffff;
+      --card: #f08a3a;
+      --table: #f7994f;
+      --ink: #2e2e2e;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: #fff;
+    }
+    .nav {
+      display: flex;
+      gap: 22px;
+      padding: 18px 20px;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav a {
+      padding: 12px 26px;
+      background: var(--panel);
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      box-shadow: 0 2px 0 rgba(0,0,0,.25) inset, 0 1px 2px rgba(0,0,0,.25);
+      transition: transform .06s ease;
+    }
+    .nav a:hover {
+      transform: translateY(-1px);
+    }
+    .nav a:active {
+      transform: translateY(0);
+    }
+    .wrap {
+      max-width: 1100px;
+      margin: 14px auto 60px;
+      padding: 0 16px;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 28px;
+      align-items: start;
+    }
+    h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-weight: 700;
+      font-size: 56px;
+      margin: 24px 0 8px;
+      letter-spacing: .2px;
+    }
+    .card {
+      background: transparent;
+      border-radius: 8px;
+      overflow: hidden;
+      width: 100%;
+      margin-top: 6px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #1c1c1c;
+      font-size: 16px;
+    }
+    thead th {
+      background: var(--card);
+      color: #fff;
+      text-align: left;
+      padding: 16px 18px;
+      font-weight: 700;
+      border-right: 2px solid rgba(255,255,255,.18);
+    }
+    thead th:last-child {
+      border-right: none;
+    }
+    tbody tr {
+      background: var(--table);
+      border-top: 2px solid rgba(255,255,255,.22);
+    }
+    tbody td {
+      vertical-align: top;
+      padding: 18px;
+      line-height: 1.35;
+      border-right: 2px solid rgba(255,255,255,.18);
+    }
+    tbody td:last-child {
+      border-right: none;
+    }
+    tbody .plan {
+      width: 22%;
+      font-weight: 700;
+    }
+    tbody .desc {
+      width: 48%;
+    }
+    tbody .price {
+      width: 30%;
+    }
+    .photo {
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 420px;
+      background: #333;
+      box-shadow: 0 10px 24px rgba(0,0,0,.25);
+    }
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .accent {
+      position: absolute;
+      left: -14px;
+      top: 55%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 220px;
+      background: var(--panel);
+      border-radius: 6px;
+    }
+    @media (max-width: 900px) {
+      .wrap {
+        grid-template-columns: 1fr;
+      }
+      .accent {
+        display: none;
+      }
+      h1 {
+        font-size: 44px;
+      }
+      tbody .plan,
+      tbody .desc,
+      tbody .price {
+        width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" aria-label="main navigation">
+    <a href="#">home.html</a>
+    <a href="#">ProductFeatures.html</a>
+    <a href="#">team.html</a>
+    <a href="#">pricingpage.html</a>
+    <a href="#">contactus.html</a>
+    <a href="#">Sign up</a>
+  </nav>
 
+  <!-- MAIN -->
+  <section class="wrap">
+    <!-- Left: Title + Table -->
+    <div>
+      <h1>Our plans</h1>
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>Plan</th>
+              <th>Description</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="plan">Basic</td>
+              <td class="desc">Access to AI chatbot and appointment tracker</td>
+              <td class="price">Free</td>
+            </tr>
+            <tr>
+              <td class="plan">Premium</td>
+              <td class="desc">Includes full medical history storage, reminders, and export features</td>
+              <td class="price">$4.99/month</td>
+            </tr>
+            <tr>
+              <td class="plan">Family Plan</td>
+              <td class="desc">Share and manage medical info for multiple users</td>
+              <td class="price">$9.99/month</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="photo">
+      <span class="accent" aria-hidden="true"></span>
+      <img alt="Doctor holding an x-ray" src="https://images.unsplash.com/photo-1580281780460-82d277b0c96d?q=80&w=1200&auto=format&fit=crop" />
+    </div>
+  </section>
+</body>
+</html>
