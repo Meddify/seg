@@ -1,0 +1,88 @@
+:root {
+  --brand: #f46b08;
+  --ink: #222;
+  --bg: #f9f9f9;
+  --card: #fff;
+}
+
+/* Base */
+* { box-sizing: border-box; }
+body {
+  font-family: "Georgia", serif;
+  background: var(--bg);
+  margin: 0;
+  color: var(--ink);
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background-color: #fff;
+  padding: 16px 20px;
+  border-bottom: 1px solid #ddd;
+}
+nav a {
+  background-color: var(--brand);
+  color: white;
+  text-decoration: none;
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: 0.2s ease;
+}
+nav a:hover {
+  background-color: #ff8533;
+  transform: translateY(-2px);
+}
+
+/* Page Title */
+h1 {
+  color: var(--brand);
+  font-size: 42px;
+  margin: 40px 20px 10px;
+  text-align: center;
+}
+.subtitle {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Team Grid */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 28px;
+  padding: 30px 24px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.member {
+  background: var(--card);
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 18px 14px;
+  text-align: center;
+  transition: 0.2s ease;
+}
+.member:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  transform: translateY(-3px);
+}
+.avatar {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--brand);
+  display: block;
+}
+.member-name {
+  color: var(--brand);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
