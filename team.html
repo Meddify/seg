@@ -1,114 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Team</title>
-  <style>
-    body {
-      font-family: "Georgia", serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      color: #222;
-    }
 
-    /* Navigation Bar */
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      background-color: white;
-      padding: 20px;
-      border-bottom: 1px solid #ddd;
-    }
-
-    nav a {
-      background-color: #f46b08;
-      color: white;
-      text-decoration: none;
-      padding: 10px 25px;
-      font-size: 16px;
-      border: none;
-      border-radius: 2px;
-      transition: background-color 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #ff8533;
-    }
-
-    /* Main Content */
-    h1 {
-      color: #f46b08;
-      font-size: 48px;
-      margin-left: 50px;
-      margin-top: 50px;
-    }
-
-    .team-container {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      flex-wrap: wrap;
-      margin: 50px;
-    }
-
-    .member {
-      text-align: left;
-      width: 250px;
-    }
-
-    .member img {
-      width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-    }
-
-    .member-name {
-      color: #f46b08;
-      font-size: 18px;
-      margin-top: 10px;
-    }
-
-    .member-desc {
-      color: #000;
-      font-size: 16px;
-    }
-  </style>
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="team.css" />
 </head>
+
 <body>
 
   <nav>
     <a href="index.html">Home</a>
     <a href="ProductFeatures.html">Product</a>
-    <a href="team.html">Our team</a>
+    <a href="team.html" aria-current="page">Our Team</a>
     <a href="pricingpage.html">Pricing</a>
-    <a href="contactus.html">Contact us</a>
-    <a href="signup.html">Sign up</a>
+    <a href="contactus.html">Contact Us</a>
+    <a href="signup.html">Sign Up</a>
   </nav>
 
-  <h1>Meet the team</h1>
+  <h1>Meet the Team</h1>
+  <p class="subtitle">Six friendly faces — names only, short and sweet.</p>
 
-  <div class="team-container">
-    <div class="member">
-      <img src="https://via.placeholder.com/250x180.png?text=Photo" alt="Member 1">
-      <div class="member-name">member 1</div>
-      <div class="member-desc">description</div>
-    </div>
+  <div id="team" class="team-container"></div>
 
-    <div class="member">
-      <img src="https://via.placeholder.com/250x180.png?text=Photo" alt="Member 2">
-      <div class="member-name">member 2</div>
-      <div class="member-desc">description</div>
-    </div>
-
-    <div class="member">
-      <img src="https://via.placeholder.com/250x180.png?text=Photo" alt="Member 3">
-      <div class="member-name">member 3</div>
-      <div class="member-desc">description</div>
-    </div>
-  </div>
+  <!-- Link to External JavaScript -->
+  <script src="team.js"></script>
 
 </body>
 </html>
