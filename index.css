@@ -1,58 +1,19 @@
-main {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-label {
-  margin-top: 1rem;
-  font-weight: bold;
-}
-
-input, textarea {
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-top: 0.3rem;
-  font-size: 1rem;
-}
-
-button {
-  margin-top: 1.5rem;
-  padding: 0.8rem;
-  border: none;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
 :root {
   --brand: #f46b08;
-  --ink: #222;
-  --bg: #f9f9f9;
-  --card: #fff;
+  --bg: #7a7a7a;
+  --ink: #fff;
 }
 
-/* Base */
-* { box-sizing: border-box; }
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Georgia", serif;
   background: var(--bg);
-  margin: 0;
   color: var(--ink);
 }
 
@@ -60,34 +21,72 @@ body {
 nav {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  background-color: #fff;
-  padding: 16px 20px;
-  border-bottom: 1px solid #ddd;
+  gap: 32px;
+  padding: 18px 24px;
 }
+
 nav a {
-  background-color: var(--brand);
-  color: white;
+  background: var(--brand);
+  color: #fff;
   text-decoration: none;
-  padding: 10px 22px;
-  font-size: 16px;
+  padding: 12px 30px;
+  font-size: 18px;
   border-radius: 4px;
   transition: 0.2s ease;
 }
+
 nav a:hover {
-  background-color: #ff8533;
+  background-color: #ff8c3d;
   transform: translateY(-2px);
 }
 
-/* Page Title */
-h1 {
-  color: var(--brand);
-  font-size: 42px;
-  margin: 40px 20px 10px;
-  text-align: center;
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 60px auto;
+  gap: 60px;
+  padding: 0 30px;
 }
-.subtitle {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #555;
+
+.hero img {
+  width: 420px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Text area */
+.hero-text {
+  max-width: 500px;
+  line-height: 1.45;
+}
+
+.hero-text h1 {
+  font-size: 64px;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  margin-top: 20px;
+  opacity: 0.9;
+}
+
+/* Make responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .hero img {
+    width: 80%;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+  }
 }
