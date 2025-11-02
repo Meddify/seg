@@ -1,12 +1,13 @@
 :root {
-  --brand: #f46b08;
-  --ink: #222;
-  --bg: #f9f9f9;
-  --card: #fff;
+  --brand: #F79028;       /* primary orange */
+  --ink: #FFFFFF;          /* light text for dark surfaces */
+  --bg: #6E6E6E;           /* medium gray page background */
+  --card: #2E2E2E;         /* dark card background */
+  --border: #E0B68A;       /* accent border (optional) */
 }
 
-
 * { box-sizing: border-box; }
+
 body {
   font-family: "Georgia", serif;
   background: var(--bg);
@@ -14,43 +15,46 @@ body {
   color: var(--ink);
 }
 
-
+/* NAVBAR */
 nav {
   display: flex;
   justify-content: center;
   gap: 25px;
-  background-color: #fff;
+  background-color: var(--bg);
   padding: 16px 20px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 2px solid var(--border);
 }
+
 nav a {
   background-color: var(--brand);
   color: white;
   text-decoration: none;
   padding: 10px 22px;
   font-size: 16px;
-  border-radius: 4px;
+  border-radius: 6px;
   transition: 0.2s ease;
 }
+
 nav a:hover {
-  background-color: #ff8533;
+  background-color: #ff9e3d; /* slightly brighter hover */
   transform: translateY(-2px);
 }
 
-
+/* HEADINGS */
 h1 {
-  color: var(--brand);
+  color: white;
   font-size: 42px;
   margin: 40px 20px 10px;
   text-align: center;
 }
+
 .subtitle {
   text-align: center;
   margin-bottom: 25px;
-  color: #555;
+  color: #EFEFEF;
 }
 
-
+/* TEAM GRID */
 .team-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -59,18 +63,22 @@ h1 {
   max-width: 1100px;
   margin: 0 auto;
 }
+
 .member {
   background: var(--card);
-  border: 1px solid #eee;
+  border: 2px solid var(--border);
   border-radius: 12px;
   padding: 18px 14px;
   text-align: center;
   transition: 0.2s ease;
+  color: var(--ink);
 }
+
 .member:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
   transform: translateY(-3px);
 }
+
 .avatar {
   width: 96px;
   height: 96px;
@@ -80,6 +88,7 @@ h1 {
   border: 3px solid var(--brand);
   display: block;
 }
+
 .member-name {
   color: var(--brand);
   font-size: 16px;
