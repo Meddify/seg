@@ -1,11 +1,11 @@
 :root {
   --brand: #F46B08;
-  --bg: #F9F9F9;
-  --ink: #2E2E2E;
+  --bg: #6E6E6E;
+  --ink: #FFFFFF;
   --text: #FFFFFF;
-  --card: #FFFFFF;
-  --border: #EDEDED;
-  --shadow: 0 10px 28px rgba(0,0,0,.08);
+  --card: #2E2E2E;
+  --border: rgba(255,255,255,.15);
+  --shadow: 0 10px 28px rgba(0,0,0,.25);
   --radius: 12px;
 }
 
@@ -22,9 +22,9 @@ body {
   display: flex;
   justify-content: center;
   gap: 25px;
-  background: #fff;
+  background: var(--bg);
   padding: 16px 20px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid rgba(255,255,255,.2);
 }
 
 .nav a {
@@ -53,14 +53,14 @@ body {
 }
 
 h1 {
-  color: var(--brand);
+  color: var(--text);
   font-size: 42px;
   margin: 24px 0 8px;
 }
 
 .subtitle {
   margin-bottom: 20px;
-  color: #555;
+  color: #ddd;
 }
 
 .card {
@@ -75,6 +75,7 @@ h1 {
   width: 100%;
   border-collapse: collapse;
   font-size: 16px;
+  color: var(--ink);
 }
 
 .table thead th {
@@ -84,11 +85,11 @@ h1 {
 }
 
 .table tbody tr:nth-child(odd) {
-  background: #FFF6EF;
+  background: rgba(255,255,255,.05);
 }
 
 .table tbody tr:nth-child(even) {
-  background: #FFFAF6;
+  background: rgba(255,255,255,.12);
 }
 
 .table td {
@@ -114,8 +115,8 @@ h1 {
   border-radius: var(--radius);
   overflow: hidden;
   min-height: 420px;
-  background: #333;
-  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  background: #444;
+  box-shadow: 0 10px 24px rgba(0,0,0,.25);
 }
 
 .photo img {
