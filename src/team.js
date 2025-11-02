@@ -1,4 +1,4 @@
-// Team Members Data
+
 const team = [
   { name: "Sarah Abada", img: "https://via.placeholder.com/400x400.png?text=Sarah" },
   { name: "Celine Arakji", img: "https://via.placeholder.com/400x400.png?text=Celine" },
@@ -10,7 +10,7 @@ const team = [
 
 const container = document.getElementById("team");
 
-// Render Team Members
+
 team.forEach(member => {
   const card = document.createElement("article");
   card.className = "member";
