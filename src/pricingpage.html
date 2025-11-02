@@ -2,176 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our plans</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #757575;
-      --panel: #eb6f2d;
-      --panel-light: #ffa362;
-      --text: #ffffff;
-      --card: #f08a3a;
-      --table: #f7994f;
-      --ink: #2e2e2e;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: #fff;
-    }
-    .nav {
-      display: flex;
-      gap: 22px;
-      padding: 18px 20px;
-      justify-content: flex-start;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .nav a {
-      padding: 12px 26px;
-      background: var(--panel);
-      color: var(--text);
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-      box-shadow: 0 2px 0 rgba(0,0,0,.25) inset, 0 1px 2px rgba(0,0,0,.25);
-      transition: transform .06s ease;
-    }
-    .nav a:hover {
-      transform: translateY(-1px);
-    }
-    .nav a:active {
-      transform: translateY(0);
-    }
-    .wrap {
-      max-width: 1100px;
-      margin: 14px auto 60px;
-      padding: 0 16px;
-      display: grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap: 28px;
-      align-items: start;
-    }
-    h1 {
-      font-family: "Playfair Display", Georgia, serif;
-      font-weight: 700;
-      font-size: 56px;
-      margin: 24px 0 8px;
-      letter-spacing: .2px;
-    }
-    .card {
-      background: transparent;
-      border-radius: 8px;
-      overflow: hidden;
-      width: 100%;
-      margin-top: 6px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      color: #1c1c1c;
-      font-size: 16px;
-    }
-    thead th {
-      background: var(--card);
-      color: #fff;
-      text-align: left;
-      padding: 16px 18px;
-      font-weight: 700;
-      border-right: 2px solid rgba(255,255,255,.18);
-    }
-    thead th:last-child {
-      border-right: none;
-    }
-    tbody tr {
-      background: var(--table);
-      border-top: 2px solid rgba(255,255,255,.22);
-    }
-    tbody td {
-      vertical-align: top;
-      padding: 18px;
-      line-height: 1.35;
-      border-right: 2px solid rgba(255,255,255,.18);
-    }
-    tbody td:last-child {
-      border-right: none;
-    }
-    tbody .plan {
-      width: 22%;
-      font-weight: 700;
-    }
-    tbody .desc {
-      width: 48%;
-    }
-    tbody .price {
-      width: 30%;
-    }
-    .photo {
-      position: relative;
-      border-radius: 8px;
-      overflow: hidden;
-      min-height: 420px;
-      background: #333;
-      box-shadow: 0 10px 24px rgba(0,0,0,.25);
-    }
-    .photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .accent {
-      position: absolute;
-      left: -14px;
-      top: 55%;
-      transform: translateY(-50%);
-      width: 18px;
-      height: 220px;
-      background: var(--panel);
-      border-radius: 6px;
-    }
-    @media (max-width: 900px) {
-      .wrap {
-        grid-template-columns: 1fr;
-      }
-      .accent {
-        display: none;
-      }
-      h1 {
-        font-size: 44px;
-      }
-      tbody .plan,
-      tbody .desc,
-      tbody .price {
-        width: auto;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Plans</title>
+  <link rel="stylesheet" href="pricing.css" />
 </head>
 <body>
-  <!-- NAV -->
+  <!-- NAV (same look as team) -->
   <nav class="nav" aria-label="main navigation">
-    <a href="home.html">home</a>
-    <a href="ProductFeatures.html">ProductFeatures</a>
-    <a href="team.html">team</a>
-    <a href="pricingpage.html">pricingpage</a>
-    <a href="contactus.html<">contactus</a>
-    <a href="#">Sign up</a>
+    <a href="index.html">Home</a>
+    <a href="ProductFeatures.html">Product</a>
+    <a href="team.html">Our Team</a>
+    <a href="pricingpage.html" aria-current="page">Pricing</a>
+    <a href="contactus.html">Contact Us</a>
+    <a href="signup.html">Sign Up</a>
   </nav>
 
   <!-- MAIN -->
-  <section class="wrap">
+  <main class="wrap">
     <!-- Left: Title + Table -->
-    <div>
-      <h1>Our plans</h1>
+    <section>
+      <h1>Our Plans</h1>
+      <p class="subtitle">Simple, transparent pricing — cancel anytime.</p>
+
       <div class="card">
-        <table>
+        <table class="table">
           <thead>
             <tr>
               <th>Plan</th>
@@ -198,13 +52,18 @@
           </tbody>
         </table>
       </div>
-    </div>
+    </section>
 
     <!-- Right: Image -->
-    <div class="photo">
+    <aside class="photo">
       <span class="accent" aria-hidden="true"></span>
-      <img alt="Doctor holding an x-ray" src="https://images.unsplash.com/photo-1580281780460-82d277b0c96d?q=80&w=1200&auto=format&fit=crop" />
-    </div>
-  </section>
+      <img
+        alt="Doctor reviewing patient X-ray"
+        src="https://images.unsplash.com/photo-1580281780460-82d277b0c96d?q=80&w=1200&auto=format&fit=crop"
+      />
+    </aside>
+  </main>
+
+  <script src="pricing.js"></script>
 </body>
 </html>
