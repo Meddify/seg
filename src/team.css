@@ -1,9 +1,8 @@
 :root {
-  --brand: #F79028;       /* primary orange */
-  --ink: #FFFFFF;          /* light text for dark surfaces */
-  --bg: #6E6E6E;           /* medium gray page background */
-  --card: #2E2E2E;         /* dark card background */
-  --border: #E0B68A;       /* accent border (optional) */
+  --brand: #f46b08;
+  --ink: #222;
+  --bg: #f9f9f9;
+  --card: #fff;
 }
 
 * { box-sizing: border-box; }
@@ -15,14 +14,13 @@ body {
   color: var(--ink);
 }
 
-/* NAVBAR */
 nav {
   display: flex;
-  justify-content: center;
+ justify-content: center;
   gap: 25px;
-  background-color: var(--bg);
+  background-color: #fff;
   padding: 16px 20px;
-  border-bottom: 2px solid var(--border);
+  border-bottom: 1px solid #ddd;
 }
 
 nav a {
@@ -31,18 +29,17 @@ nav a {
   text-decoration: none;
   padding: 10px 22px;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 4px;
   transition: 0.2s ease;
 }
 
 nav a:hover {
-  background-color: #ff9e3d; /* slightly brighter hover */
+  background-color: #ff8533;
   transform: translateY(-2px);
 }
 
-/* HEADINGS */
 h1 {
-  color: white;
+  color: var(--brand);
   font-size: 42px;
   margin: 40px 20px 10px;
   text-align: center;
@@ -51,10 +48,9 @@ h1 {
 .subtitle {
   text-align: center;
   margin-bottom: 25px;
-  color: #EFEFEF;
+  color: #555;
 }
 
-/* TEAM GRID */
 .team-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -66,16 +62,15 @@ h1 {
 
 .member {
   background: var(--card);
-  border: 2px solid var(--border);
+  border: 1px solid #eee;
   border-radius: 12px;
   padding: 18px 14px;
   text-align: center;
   transition: 0.2s ease;
-  color: var(--ink);
 }
 
 .member:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.07);
   transform: translateY(-3px);
 }
 
