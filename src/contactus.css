@@ -1,11 +1,68 @@
+:root {
+  --brand: #F46B08;
+  --bg: #6E6E6E;
+  --ink: #FFFFFF;
+  --text: #FFFFFF;
+  --card: #2E2E2E;
+  --border: rgba(255,255,255,.15);
+  --shadow: 0 10px 28px rgba(0,0,0,.25);
+  --radius: 12px;
+}
 
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: var(--bg);
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+}
+.nav a {
+  background: var(--brand);
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: .2s ease;
+}
+.nav a:hover {
+  background: #ff8533;
+  transform: translateY(-2px);
+}
+
+/* HEADERS */
+h1 {
+  text-align: center;
+  margin: 30px 0 5px;
+  font-size: 42px;
+  color: var(--text);
+}
+.subtitle {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+/* FORM CARD */
 main {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 form {
@@ -16,27 +73,40 @@ form {
 label {
   margin-top: 1rem;
   font-weight: bold;
+  color: var(--text);
 }
 
 input, textarea {
   padding: 0.7rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border);
   border-radius: 5px;
   margin-top: 0.3rem;
   font-size: 1rem;
+  color: #000;
+}
+
+textarea {
+  min-height: 120px;
 }
 
 button {
   margin-top: 1.5rem;
   padding: 0.8rem;
   border: none;
-  background-color: #4CAF50;
-  color: white;
+  background: var(--brand);
+  color: var(--text);
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: 700;
+}
+button:hover {
+  background: #ff8533;
+  transform: translateY(-2px);
 }
 
-button:hover {
-  background-color: #45a049;
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #ddd;
 }
