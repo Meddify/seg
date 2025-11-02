@@ -1,0 +1,43 @@
+style_guidelines.txt
+------------------------------------------------------------
+1 Repo Structure
+------------------------------------------------------------
+/
+├─ src/           (HTML, CSS, JS, images)
+├─ mockups/
+├─ README.md
+├─ package.json
+├─ yarn.lock
+
+------------------------------------------------------------
+2 Naming Conventions
+------------------------------------------------------------
+kebab-case for files and folders
+example.html
+example.css
+example.js
+
+------------------------------------------------------------
+3 Git Workflow
+------------------------------------------------------------
+branch: main
+create feature branches
+open Pull Requests
+commit often
+resolve conflicts locally
+
+------------------------------------------------------------
+4 Color Palette
+------------------------------------------------------------
+--brand: #F46B08
+--bg: #6E6E6E
+--ink: #FFFFFF
+--text: #FFFFFF
+
+------------------------------------------------------------
+5 Font
+------------------------------------------------------------
+font-family: "Georgia", serif;
+base size: 16px
+h1: 42px
+nav links: 16px, bold
