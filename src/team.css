@@ -1,8 +1,9 @@
 :root {
-  --brand: #f46b08;
-  --ink: #222;
-  --bg: #f9f9f9;
-  --card: #fff;
+  --card: #ffffff;
+  --panel: #F46B08;
+  --panel-light: #F46B08;
+  --table: #F46B08;
+
 }
 
 * { box-sizing: border-box; }
