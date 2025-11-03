@@ -1,29 +1,66 @@
-<html>
-<head> 
-  <title> Our Product </title>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Product</title>
+  <link rel="stylesheet" href="ProductFeatures.css" />
 </head>
-  <h1> Our Product</h1>
-  <p>
-    <a href="home.html"> Home </a> |
-    <a href="ProductFeatures.html"> Product </a> |
-    <a href="team.html"> Our team </a> |
-    <a href="pricingpage.html"> Pricing </a> |
-    <a href="contactus.html"> Contact us </a> |
-    <a href="signup.html"> Sign Up </a> |
-  </p>
-  
-  <hr>
-  
-  <h2>Smart Health Chatbot</h2>
-  <p>Ask questions about symptoms and get informative, AI-powered insights.</p>
-  <h2>Appointment Tracker</h2>
-  <p>Keep track of all your medical appointments in one place with reminders.</p>
-  <h2>Health Records Hub</h2>
-  <p>Securely store and access your test results, prescriptions, and medical charts.</p>
-  
-  <hr>
-  
-  <p>© 2025 Meddify</p>
-  
-</html>
+<body>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="ProductFeatures.html" aria-current="page">Product</a>
+    <a href="team.html">Our Team</a>
+    <a href="pricingpage.html">Pricing</a>
+    <a href="contactus.html">Contact Us</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
 
+  <header class="hero">
+    <h1>Our product</h1>
+  </header>
+
+  <main class="features">
+    <article class="feature">
+      <div class="icon">
+        <svg viewBox="0 0 64 64" width="84" height="84">
+          <rect x="6" y="10" rx="10" ry="10" width="52" height="36" fill="#ffffff"/>
+          <path d="M18 48 L26 39" stroke="#000" stroke-width="3" fill="none"/>
+        </svg>
+      </div>
+      <h2>Smart Health Chatbot</h2>
+      <p>Ask questions about symptoms and get informative, AI-powered insights.</p>
+    </article>
+
+    <article class="feature">
+      <div class="icon">
+        <svg viewBox="0 0 64 64" width="84" height="84">
+          <rect x="8" y="14" width="48" height="40" rx="4" fill="#ffffff"/>
+          <rect x="8" y="20" width="48" height="6" fill="#F46B08"/>
+          <circle cx="16" cy="18" r="3" fill="#2E2E2E"/>
+          <circle cx="26" cy="18" r="3" fill="#2E2E2E"/>
+          <circle cx="36" cy="18" r="3" fill="#2E2E2E"/>
+        </svg>
+      </div>
+      <h2>Appointment Tracker</h2>
+      <p>Keep track of all your medical appointments in one place with reminders.</p>
+    </article>
+
+    <article class="feature">
+      <div class="icon">
+        <svg viewBox="0 0 64 64" width="84" height="84">
+          <rect x="10" y="10" width="44" height="44" rx="6" fill="#ffffff"/>
+          <rect x="18" y="34" width="6" height="12" fill="#2E2E2E"/>
+          <rect x="30" y="28" width="6" height="18" fill="#F46B08"/>
+          <rect x="42" y="22" width="6" height="24" fill="#2E2E2E"/>
+          <polyline points="16,40 28,30 40,26 50,18" fill="none" stroke="#F46B08" stroke-width="2"/>
+        </svg>
+      </div>
+      <h2>Health Records Hub</h2>
+      <p>Securely store and access your test results, prescriptions, and medical charts.</p>
+    </article>
+  </main>
+
+  <script src="ProductFeatures.js"></script>
+</body>
+</html>

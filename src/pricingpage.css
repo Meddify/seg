@@ -110,6 +110,16 @@ h1 {
   width: 30%;
 }
 
+.table .price {
+  width: 30%;
+}
+
+/* Highlight selected pricing row*/
+.selected{
+  outline: 2px solid var(--brand);
+  background-color: rgba(244, 107, 8, 0.2);
+}
+
 .photo {
   position: relative;
   border-radius: var(--radius);
