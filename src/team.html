@@ -4,14 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Team</title>
-
-
   <link rel="stylesheet" href="team.css" />
 </head>
 
 <body>
 
-  <nav>
+  <nav class="nav">
     <a href="index.html">Home</a>
     <a href="ProductFeatures.html">Product</a>
     <a href="team.html" aria-current="page">Our Team</a>
@@ -25,7 +23,18 @@
 
   <div id="team" class="team-container"></div>
 
-  
+  <!-- MODAL -->
+  <div id="member-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+      <button class="modal-close" aria-label="Close">×</button>
+      <img id="modal-avatar" class="modal-avatar" src="" alt="">
+      <h3 id="modal-name" class="modal-name"></h3>
+      <p id="modal-role" class="modal-role"></p>
+      <p id="modal-bio" class="modal-bio"></p>
+    </div>
+  </div>
+
   <script src="team.js"></script>
 
 </body>
