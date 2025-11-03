@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Pricing page ready ');
   const rows = document.querySelectorAll(".table tbody tr");
 
+  //Add hover tooltips to each plan cell
+  const planCells = document.querySelectorAll(".plan");
+  planCells.forEach(plan => {
+    plan.setAttribute("title", `Click to learn more about the ${plan.textContent}plan`);
+  });
+
+  //Add click behaviour to each row
   rows.forEach(row => {
     row.addEventListener("click", () => {
       // Highlight the selected row
