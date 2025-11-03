@@ -1,97 +1,41 @@
-:root {
-  --brand: #F46B08;
-  --bg: #6E6E6E;
-  --ink: #FFFFFF;
-  --text: #FFFFFF;
-  --card: #2E2E2E;
-  --border: #EDEDED;
-  --shadow: 0 10px 28px rgba(0,0,0,.25);
-  --radius: 12px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Team</title>
+  <link rel="stylesheet" href="team.css" />
+</head>
 
-* { box-sizing: border-box; }
+<body>
 
-body {
-  margin: 0;
-  font-family: "Georgia", serif;
-  background: var(--bg);
-  color: var(--ink);
-}
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="ProductFeatures.html">Product</a>
+    <a href="team.html" aria-current="page">Our Team</a>
+    <a href="pricingpage.html">Pricing</a>
+    <a href="contactus.html">Contact Us</a>
+    <a href="signup.html">Sign Up</a>
+  </nav>
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  background: var(--bg);
-  padding: 16px 20px;
-  border-bottom: 1px solid rgba(255,255,255,.2);
-}
+  <h1>Meet the Team</h1>
+  <p class="subtitle">Six names.</p>
 
-nav a {
-  background-color: var(--brand);
-  color: var(--text);
-  text-decoration: none;
-  padding: 10px 22px;
-  font-size: 16px;
-  border-radius: 4px;
-  transition: 0.2s ease;
-  font-weight: 700;
-}
+  <div id="team" class="team-container"></div>
 
-nav a:hover {
-  background-color: #ff8533;
-  transform: translateY(-2px);
-}
+  <!-- MODAL -->
+  <div id="member-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-name">
+      <button class="modal-close" aria-label="Close">×</button>
+      <img id="modal-avatar" class="modal-avatar" src="" alt="">
+      <h3 id="modal-name" class="modal-name"></h3>
+      <p id="modal-role" class="modal-role"></p>
+      <p id="modal-bio" class="modal-bio"></p>
+    </div>
+  </div>
 
-h1 {
-  color: var(--text);
-  font-size: 42px;
-  margin: 40px 20px 10px;
-  text-align: center;
-}
+  <script src="team.js"></script>
 
-.subtitle {
-  text-align: center;
-  margin-bottom: 25px;
-  color: #ddd;
-}
-
-.team-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 28px;
-  padding: 30px 24px 60px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.member {
-  background: var(--card);
-  border: 1px solid rgba(255,255,255,.15);
-  border-radius: 12px;
-  padding: 18px 14px;
-  text-align: center;
-  transition: 0.2s ease;
-}
-
-.member:hover {
-  box-shadow: var(--shadow);
-  transform: translateY(-3px);
-}
-
-.avatar {
-  width: 96px;
-  height: 96px;
-  margin: 0 auto 12px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--brand);
-  display: block;
-}
-
-.member-name {
-  color: var(--brand);
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: .2px;
-}
+</body>
+</html>
