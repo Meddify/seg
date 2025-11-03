@@ -1,0 +1,87 @@
+:root {
+  --brand: #F46B08;
+  --bg: #6E6E6E;
+  --ink: #FFFFFF;
+  --text: #FFFFFF;
+  --card: #2E2E2E;
+  --border: #EDEDED;
+  --shadow: 0 10px 28px rgba(0,0,0,.25);
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: var(--bg);
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255,255,255,.2);
+}
+
+nav a {
+  background-color: var(--brand);
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: 0.2s ease;
+  font-weight: 700;
+}
+
+nav a:hover {
+  background-color: #ff8533;
+  transform: translateY(-2px);
+}
+
+h1 {
+  color: var(--text);
+  font-size: 42px;
+  margin: 40px 20px 10px;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+form {
+  max-width: 400px;
+  margin: 0 auto 60px;
+  background: var(--card);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 16px;
+}
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+  border-color: var(--brand);
+  outline: none;
+}
