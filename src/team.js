@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const team = [
-    { name: "Sarah Abada",  img: "https://via.placeholder.com/400x400.png?text=Sarah",  role: "Front-end & Accessibility", bio: "Builds elegant, accessible UIs and keeps our components consistent with design tokens." },
-    { name: "Celine Arakji", img: "https://via.placeholder.com/400x400.png?text=Celine", role: "Product & QA",            bio: "Owns roadmaps, writes crisp tickets, and ensures every release ships clean." },
-    { name: "Rosesh Baniya", img: "https://via.placeholder.com/400x400.png?text=Rosesh", role: "Back-end Services",       bio: "Designs APIs, databases, and performance-tuned services for reliable scale." },
-    { name: "Hachem Chamas", img: "https://via.placeholder.com/400x400.png?text=Hachem", role: "Security & Auth",         bio: "Implements secure auth flows, threat models, and privacy-first data handling." },
-    { name: "Aimee Ganza",   img: "https://via.placeholder.com/400x400.png?text=Aimee",  role: "UX Writing & Docs",       bio: "Turns complex flows into clear copy and keeps our docs human and helpful." },
-    { name: "Rishi V.",      img: "https://via.placeholder.com/400x400.png?text=Rishi",  role: "DevOps & CI/CD",          bio: "Automates builds, tests, and deploys—so shipping is fast and stress-free." }
+    { name: "Sarah Abada",  img: "https://via.placeholder.com/400x400.png?text=Sarah",  role: "Front-end & Accessibility", bio: "idk do it later" },
+    { name: "Celine Arakji", img: "https://via.placeholder.com/400x400.png?text=Celine", role: "fill",            bio: "idk do it later" },
+    { name: "Rosesh Baniya", img: "https://via.placeholder.com/400x400.png?text=Rosesh", role: "fill",       bio: "idk do it later" },
+    { name: "Hachem Chamas", img: "https://via.placeholder.com/400x400.png?text=Hachem", role: "Sfill",         bio: "idk do it later" },
+    { name: "Aimee Ganza",   img: "https://via.placeholder.com/400x400.png?text=Aimee",  role: "fill later",       bio: "idk do it later" },
+    { name: "Rishi V.",      img: "https://via.placeholder.com/400x400.png?text=Rishi",  role: "fill",          bio: "idk do it later" }
   ];
 
   const container = document.getElementById("team");
