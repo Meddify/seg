@@ -1,11 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const features = document.querySelectorAll(".feature");
-
-  features.forEach((card, i) => {
-    card.addEventListener("click", () => {
-      if (i === 0) window.location.href = "chatbot.html";
-      if (i === 1) window.location.href = "appointments.html";
-      if (i === 2) window.location.href = "records.html";
-    });
+window.addEventListener("load", () => {
+  document.querySelectorAll(".feature").forEach((f, i) => {
+    setTimeout(() => {
+      f.style.opacity = "1";
+      f.style.transform = "translateY(0)";
+    }, i * 200); // stagger each card by 0.2s
   });
 });
