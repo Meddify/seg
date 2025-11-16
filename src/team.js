@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bio: "Works mainly on the HTML/CSS, keeping the pages consistent with the color theme and layout we agreed on."
     },
     { 
-      name: "Celine Arakji",
+      name: "Celina Arakji",
       role: "Content & Organization",
       bio: "Helps plan the sections of the website, writes a lot of the text, and makes sure we follow the project instructions."
     },
