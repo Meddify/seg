@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="team.css" />
 </head>
 <body>
-  <!-- NAV – same pattern as other pages -->
+
   <nav class="nav" aria-label="main navigation">
     <a href="index.html">Home</a>
     <a href="ProductFeatures.html">Product</a>
@@ -18,21 +18,17 @@
   </nav>
 
   <header>
-    <h1>Our Team</h1>
-    <p class="subtitle">
-      The people behind Meddify’s design, development, and accessibility.
-    </p>
+    <h1>Meet the Team</h1>
+    <p class="subtitle">The minds behind Meddify — building better digital health.</p>
   </header>
 
-  <!-- Team card grid -->
-  <main class="team-container" id="team">
-    <!-- JS will inject team members here -->
-  </main>
+  <main class="team-container" id="team"></main>
 
+  <!-- Modal -->
   <div class="modal" id="member-modal" aria-hidden="true">
     <div class="modal-backdrop" data-close="true"></div>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-name">
-      <button class="modal-close" type="button" aria-label="Close team member details">×</button>
+    <div class="modal-dialog">
+      <button class="modal-close" type="button">×</button>
       <div class="modal-initial-badge" id="modal-initials"></div>
       <h2 class="modal-name" id="modal-name"></h2>
       <p class="modal-role" id="modal-role"></p>
@@ -42,6 +38,6 @@
 
   <footer class="footer">© 2025 Meddify</footer>
 
-  <script src="team.js" defer></script>
+<script src="team.js" defer></script>
 </body>
 </html>
