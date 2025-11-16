@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Our Team</title>
   <link rel="stylesheet" href="team.css" />
 </head>
-
 <body>
-
-  <nav class="nav">
+  <!-- NAV – same pattern as other pages -->
+  <nav class="nav" aria-label="main navigation">
     <a href="index.html">Home</a>
     <a href="ProductFeatures.html">Product</a>
     <a href="team.html" aria-current="page">Our Team</a>
@@ -18,24 +17,31 @@
     <a href="signup.html">Sign Up</a>
   </nav>
 
-  <h1>Meet the Team</h1>
-  <p class="subtitle">Six names.</p>
+  <header>
+    <h1>Our Team</h1>
+    <p class="subtitle">
+      The people behind Meddify’s design, development, and accessibility.
+    </p>
+  </header>
 
-  <div id="team" class="team-container"></div>
+  <!-- Team card grid -->
+  <main class="team-container" id="team">
+    <!-- JS will inject team members here -->
+  </main>
 
-  <!-- MODAL -->
-  <div id="member-modal" class="modal" aria-hidden="true">
+  <div class="modal" id="member-modal" aria-hidden="true">
     <div class="modal-backdrop" data-close="true"></div>
     <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-name">
-      <button class="modal-close" aria-label="Close">×</button>
-      <img id="modal-avatar" class="modal-avatar" src="" alt="">
-      <h3 id="modal-name" class="modal-name"></h3>
-      <p id="modal-role" class="modal-role"></p>
-      <p id="modal-bio" class="modal-bio"></p>
+      <button class="modal-close" type="button" aria-label="Close team member details">×</button>
+      <div class="modal-initial-badge" id="modal-initials"></div>
+      <h2 class="modal-name" id="modal-name"></h2>
+      <p class="modal-role" id="modal-role"></p>
+      <p class="modal-bio" id="modal-bio"></p>
     </div>
   </div>
 
-  <script src="team.js"></script>
+  <footer class="footer">© 2025 Meddify</footer>
 
+  <script src="team.js" defer></script>
 </body>
 </html>
