@@ -64,7 +64,7 @@ body {
 .hero-text {
   max-width: 480px;
   line-height: 1.45;
-  margin-top: 20px; 
+  margin-top: -200px;  
 }
 
 .hero-text h1 {
@@ -78,6 +78,15 @@ body {
   margin-top: 20px;
   opacity: 0.95;
   color: var(--ink);
+}
+
+.hero-footer {
+  text-align: right;
+  width: fit-content;
+  margin-left: auto;       
+  margin-right: 140px;      
+  margin-top: -10px;
+  color: #ddd;
 }
 
 footer {
