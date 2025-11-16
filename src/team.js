@@ -1,42 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
   const team = [
     { 
-      name: "Sarah Abada",  
-      role: "Front-end & Accessibility",
-      bio: "Leads UI implementation and ensures components follow accessibility best practices."
+      name: "Sarah Abada",
+      role: "Front-End & Styling",
+      bio: "Works mainly on the HTML/CSS, keeping the pages consistent with the color theme and layout we agreed on."
     },
     { 
-      name: "Celine Arakji", 
-      role: "Product & UX",
-      bio: "Coordinates features, flow, and user experience for Meddify’s main modules."
+      name: "Celine Arakji",
+      role: "Content & Organization",
+      bio: "Helps plan the sections of the website, writes a lot of the text, and makes sure we follow the project instructions."
     },
     { 
-      name: "Rosesh Baniya", 
-      role: "Back-end & APIs",
-      bio: "Works on data handling, integrations, and the logic behind Meddify’s services."
+      name: "Rosesh Baniya",
+      role: "Basic JavaScript & Links",
+      bio: "Connects the pages together, helps with simple JavaScript, and checks that the buttons and links actually work."
     },
     { 
-      name: "Hachem Chamas", 
-      role: "Data & AI",
-      bio: "Helps design and test AI features such as the smart health chatbot."
+      name: "Hachem Chamas",
+      role: "Ideas & Problem-Solving",
+      bio: "Comes up with ideas for features, helps fix small bugs, and gives feedback on what looks clear or confusing."
     },
     { 
-      name: "Aimee Ganza", 
-      role: "Research & Testing",
-      bio: "Focuses on user feedback, documentation, and quality assurance."
+      name: "Aimee Ganza",
+      role: "Testing & Writing",
+      bio: "Tests the pages to see what’s broken, gives comments from a user point of view, and helps with the written parts of the project."
     },
     { 
-      name: "Rishi Velayutham", 
-      role: "DevOps & Deployment",
-      bio: "Supports deployment, version control, and keeping the project running smoothly."
+      name: "Rishi Velayutham",
+      role: "File Setup & GitHub",
+      bio: "Helps with the folder structure, uploads files to GitHub, and makes sure everyone’s work is saved and updated."
     }
   ];
 
   const container = document.getElementById("team");
-  if (!container) {
-    console.error("❌ #team container not found");
-    return;
-  }
 
   function getInitials(name) {
     const parts = name.trim().split(/\s+/);
@@ -44,80 +40,50 @@ document.addEventListener("DOMContentLoaded", () => {
     return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
   }
 
-  // Build cards
+  // Render each card
   team.forEach(member => {
-    const card = document.createElement("article");
+    const card = document.createElement("div");
     card.className = "member";
-    card.tabIndex = 0;
     card.dataset.name = member.name;
 
-    const initials = document.createElement("div");
-    initials.className = "initial-badge";
-    initials.textContent = getInitials(member.name);
+    card.innerHTML = `
+      <div class="initial-badge">${getInitials(member.name)}</div>
+      <div class="member-name">${member.name}</div>
+      <div class="member-role">${member.role}</div>
+    `;
 
-    const nameEl = document.createElement("div");
-    nameEl.className = "member-name";
-    nameEl.textContent = member.name;
-
-    const roleEl = document.createElement("p");
-    roleEl.className = "member-role";
-    roleEl.textContent = member.role;
-
-    card.append(initials, nameEl, roleEl);
     container.appendChild(card);
   });
 
-  // Modal refs
-  const modal   = document.getElementById("member-modal");
-  const mInitials = document.getElementById("modal-initials");
-  const mName   = document.getElementById("modal-name");
-  const mRole   = document.getElementById("modal-role");
-  const mBio    = document.getElementById("modal-bio");
-  const mClose  = document.querySelector(".modal-close");
+  // Modal logic
+  const modal = document.getElementById("member-modal");
+  const initials = document.getElementById("modal-initials");
+  const mName = document.getElementById("modal-name");
+  const mRole = document.getElementById("modal-role");
+  const mBio = document.getElementById("modal-bio");
+  const mClose = document.querySelector(".modal-close");
 
   function openModal(member) {
-    if (!modal) return;
-    mInitials.textContent = getInitials(member.name);
+    initials.textContent = getInitials(member.name);
     mName.textContent = member.name;
-    mRole.textContent = member.role || "";
-    mBio.textContent  = member.bio  || "Team member.";
+    mRole.textContent = member.role;
+    mBio.textContent = member.bio;
     modal.classList.add("show");
-    modal.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden";
   }
 
   function closeModal() {
-    if (!modal) return;
     modal.classList.remove("show");
-    modal.setAttribute("aria-hidden", "true");
-    document.body.style.overflow = "";
   }
 
-  // Open via click
   container.addEventListener("click", (e) => {
     const card = e.target.closest(".member");
     if (!card) return;
-    const member = team.find(t => t.name === card.dataset.name);
-    if (member) openModal(member);
+    const person = team.find(x => x.name === card.dataset.name);
+    if (person) openModal(person);
   });
 
+  mClose.addEventListener("click", closeModal);
 
-  container.addEventListener("keydown", (e) => {
-    if (e.key !== "Enter" && e.key !== " ") return;
-    const card = e.target.closest(".member");
-    if (!card) return;
-    e.preventDefault();
-    const member = team.find(t => t.name === card.dataset.name);
-    if (member) openModal(member);
-  });
-
-  
-  mClose?.addEventListener("click", closeModal);
-  modal?.addEventListener("click", (e) => {
-    if (e.target.dataset.close === "true") closeModal();
-    if (e.target.classList.contains("modal-backdrop")) closeModal();
-  });
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal?.classList.contains("show")) closeModal();
-  });
-});
+  modal.addEventListener("click", (e) => {
+    if (e.target.classList.contains("modal-backdrop")) {
+      closeModal();
